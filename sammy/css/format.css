@@ -1,0 +1,41 @@
+/* Resets */
+html, body, ul, h1 { margin: 0; padding: 0; }
+
+/* For debugging layout
+border: 2px solid red;
+*/
+
+body {
+    text-align: center;
+}
+
+.title {
+	font-family: 'Open Sans', Helvetica, Verdana, Sans-serif;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background: url("../img/nav-bg.jpg");
+	background-repeat: repeat;
+	color: white;
+	font-family: Verdana, Arial, Sans-serif;
+	font-size: 1.5rem;
+}
+
+nav a {
+    color: white;
+	text-decoration: none;
+}
+
+nav li {
+    display: inline;
+	padding: 0px 25px 0px 0px;
+}
+
+nav li:last-child {
+    padding-right: 0px;
+}
+
+.panotour {
+    margin: auto;
+}
