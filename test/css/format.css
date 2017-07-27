@@ -1,9 +1,21 @@
 /* Resets */
 html, body, ul, h1, h2, h3, p, div, section { margin: 0; padding: 0; }
 
+* {
+  box-sizing: border-box;
+}
+
 /* For debugging layout
 border: 2px solid red;
 */
+
+/* bootstrap edit */
+.center-block {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
 
 html {
 	height: 100%;
@@ -63,14 +75,15 @@ body {
 }
 
 .tags {
-    position: absolute;
+  /*position: absolute;
 	left: 6px;
-	bottom: 6px;
+	bottom: 6px;*/
 	/* Option to have tags overlap image */
 	/*background-color: white;
 	padding-top: 6px;
 	padding-right: 6px;
 	border-top-right-radius: 5px;*/
+  padding: 10px;
 }
 
 .tags p {
@@ -120,3 +133,25 @@ body {
 	border-radius: 5px;
 	box-shadow: 1px 1px darkblue;
 }*/
+
+.row.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects [class*=col] {
+  display: flex;
+}
+
+.project {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.project h1 {
+  font-size: 45px;
+  padding: 10px;
+}
