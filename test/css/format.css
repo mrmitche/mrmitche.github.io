@@ -86,7 +86,8 @@ body {
 /* Reset button hidden by default, shows when projects are hidden */
 #reset {
     display: none;
-	/*TODO: position and format like a button*/
+	/*TODO: add padding below so not at edge of screen on mobile*/
+	padding-bottom: 5px;
 }
 
 #reset p {
@@ -102,6 +103,12 @@ body {
 #herstory, #hackathon {
     display: none;
 } /*TODO: Will probably replace this with individual html files embedded as fancyboxes*/
+
+.sites {
+    margin: 5px;
+    /*width: 50px;
+	height: 50px;*/
+}
 
 /*** Different method of tagging with individual colors ***/
 /* if using again add <div class="html"></div> inside project div */
@@ -120,3 +127,50 @@ body {
 	border-radius: 5px;
 	box-shadow: 1px 1px darkblue;
 }*/
+
+/* Styling for Project Details Pages */
+.detail { /* Same as .project, but do not want height adjusted by JS */
+    background-color: white;
+	margin: 10px 0;
+	box-shadow: 1px 1px #999, 2px 2px #888, 3px 3px #777, 4px 4px #666, 5px 5px #555;
+	/*height: 150px;*/
+}
+
+.detail p, .detail h2 {
+    padding: 5px 10px;
+}
+
+.detail img { /* Tools used and github link images */
+    margin: 5px;
+}
+
+.detail a, .detail a:visited, .detail a:active, .detail a:focus {
+    text-decoration: none;
+    color: black;
+    outline-style: none;
+}
+
+.fancybox-caption {
+    border: none;
+}
+
+/* If not using the same format for other project pages, change to an ID */
+.image { /* Images in the main project details sections */
+    /*float: left;*/
+}
+
+.video {
+    position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.video iframe {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
