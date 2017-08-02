@@ -1,5 +1,5 @@
 /* Resets */
-html, body, ul, h1, h2, h3, p, div, section { margin: 0; padding: 0; }
+html, body, ul, h1, h2, h3, p, div, section, img { margin: 0; padding: 0; }
 
 /* For debugging layout
 border: 2px solid red;
@@ -140,23 +140,56 @@ body {
     padding: 5px 10px;
 }
 
+.detail h2 {
+	color: #3ba1e3;
+	text-shadow: 1px 1px #555;
+}
+
 .detail img { /* Tools used and github link images */
     margin: 5px;
 }
 
 .detail a, .detail a:visited, .detail a:active, .detail a:focus {
     text-decoration: none;
-    color: black;
+    color: #222;
     outline-style: none;
 }
 
+.home {
+    position: absolute;
+	left: 15px;
+	top: 10px;
+	background: white;
+	box-shadow: 1px 1px #999, 2px 2px #888, 3px 3px #777, 4px 4px #666, 5px 5px #555;
+}
+
+@media only screen and (max-width: 768px) {
+    .home {
+	    position: initial;
+		margin: 10px 0;
+	}
+}
+
+.home p {
+    padding: 2px 5px;
+}
+
+.home a, .home a:visited, .home a:active {
+    text-decoration: none;
+	color: black;
+}
+
+/* Override Fancybox Styling */
 .fancybox-caption {
     border: none;
 }
+.fancybox-enabled {
+    overflow: initial;
+}
 
-/* If not using the same format for other project pages, change to an ID */
 .image { /* Images in the main project details sections */
-    /*float: left;*/
+    padding: 5px 15px 5px 5px;
+	width: 100%;
 }
 
 .video {
