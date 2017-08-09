@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nuke Render Script Project Details - Matthew Mitchell</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+        type="image/png"
+	    href="img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/jquery.fancybox.min.css" rel="stylesheet" />
+  <link href="css/format.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>
+
+<section class="container full-width">
+  <div class="row title">
+    <h1>Nuke Export Script</h1>
+  </div>
+  <div class="home">
+    <a href="/"><p>&#10094; Home</p></a>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+	  <div class="row">
+	    <div class="col-lg-12">
+	      <div class="detail">
+		    <h2>Summary</h2>
+		    <p>Python script to change node settings in Nuke for rendering final shots. Created for the visual effects team on the Syfy series Incorporated.</p>
+	      </div>
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col-lg-12">
+	      <div class="detail">
+		    <h2>Tools Used</h2>
+			<img src="img/python.png" />
+			<img src="img/nuke.png" />
+	      </div>
+		</div>
+	  </div>
+	  <!-- Section to add once code added to git <div class="row">
+	    <div class="col-lg-12">
+	      <div class="detail">
+		    <h2>See Project In Action</h2>
+			<a href="https://github.com/mrmitche/DoForDew"><img src="img/githubtext.png" /></a>
+	      </div>
+		</div>
+	  </div> -->
+    </div>
+	<div class="col-lg-8">
+	  <div class="detail">
+		<p>Working as a VFX Coordinator on Incorporated, I noticed that our artist team had to take time away from working on shots to render approved shots for final post-production. This meant opening the Nuke files for individual shots, changing the colorspace of the read nodes, turning off the vectorfield, and changing the colorspace, file type, and codec of the write nodes. On a show that had about 1000 VFX shots over ten episodes, this took lots of time away from the artist's day. </p>
+		<p>My script would select nodes and make the necessary changes automatically (see below excerpt for the read nodes). The user would be given a message to confirm which nodes were affected. This greatly reduced the time spent changing the export settings from the review file to the final version.</p>
+		<div class="code">
+		  <code class="prettyprint">
+		  #Select footage read nodes, turn off raw data and change colorspace<br>
+          for i in nuke.selectedNodes("Read"):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;path = i.knob("file").getValue()<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if path[0:10] == "H:/DAILIES" or path[0:13] == "I:/FROM_DRIVE":<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.knob("raw").setValue(False)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.knob("colorspace").setValue("AlexaV3LogC")<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message += str(i.name()) + "\n"<br>
+		  </code>
+		</div>
+		<p>I created this script outside of work hours as a temporary fix until the team had time to re-evaluate their workflow. </p>
+	  </div>
+	</div>
+  </div>
+</section>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+</body>
+</html>

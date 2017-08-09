@@ -207,3 +207,9 @@ body {
 	height: 100%;
 	padding: 10px;
 }
+
+.code {
+    text-align: left;
+	display: flex;
+	justify-content: center;
+}
