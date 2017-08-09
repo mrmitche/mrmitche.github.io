@@ -189,7 +189,7 @@ body {
 
 .image { /* Images in the main project details sections */
     padding: 5px 15px 5px 5px;
-	width: 100%;
+	max-width: 100%;
 }
 
 .video {
