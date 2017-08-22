@@ -1,0 +1,215 @@
+/* Resets */
+html, body, ul, h1, h2, h3, p, div, section, img { margin: 0; padding: 0; }
+
+/* For debugging layout
+border: 2px solid red;
+*/
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+    text-align: center;
+	/*background-color: black;*/
+	background: url('../img/bg.png');
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: top;
+}
+
+.title h1 {
+    font-family: 'Poppins', sans-serif;
+	font-size: 5em;
+	color: white;
+	font-weight: 500;
+	text-shadow: 1px 1px #999, 2px 2px #888, 3px 3px #777, 4px 4px #666, 5px 5px #555;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.project {
+    background-color: white;
+	margin: 10px 0;
+	box-shadow: 1px 1px #999, 2px 2px #888, 3px 3px #777, 4px 4px #666, 5px 5px #555;
+	/*max-width: 500px; /* Whatever image width ends up being */
+	position: relative; /* Necessary to position .tags */
+}
+
+/* Not currently used anymore, but used for project images */
+.project h2 {
+    font-family: 'Poppins', sans-serif;
+	font-size: 7.8vw; /* May not look good on mobile */
+	padding-top: 100px;/*15px;*/
+	font-weight: 700;
+	color: #3BA1E3;
+	text-shadow: 1px 1px #999, 2px 2px #888, 3px 3px #777;
+	/*TODO: offset background image to align with body bg image if possible*/
+	/*background: url(../img/bg.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	/*text-shadow: -1px -1px #999, -2px -2px #888, -3px -3px #777, -4px -4px #666, -5px -5px #555;*/
+}
+
+.project img {
+    width: 100%;
+	padding: 8px; /* TODO: Bottom not appearing same size, replace with white border? */
+	/* max-height: 80%; Give max-height to leave room for showing tools used, will need to adjust images so not scaled funny */
+}
+
+.tags {
+    position: absolute;
+	left: 6px;
+	bottom: 6px;
+	/* Option to have tags overlap image */
+	/*background-color: white;
+	padding-top: 6px;
+	padding-right: 6px;
+	border-top-right-radius: 5px;*/
+}
+
+.tags p {
+    background-color: #999;
+	padding: 2px 5px;
+	border-radius: 5px;
+	box-shadow: 1px 1px #333;
+	display: inline;
+	margin-right: 2px;
+	cursor: pointer;
+}
+
+/* Reset button hidden by default, shows when projects are hidden */
+#reset {
+    display: none;
+	/*TODO: add padding below so not at edge of screen on mobile*/
+	padding-bottom: 5px;
+}
+
+#reset p {
+    background-color: white;
+	padding: 2px 5px;
+	border-radius: 5px;
+	box-shadow: 1px 1px #333;
+	cursor: pointer;
+	display: inline;
+}
+
+/* Hide All Project Information Until Fancybox Opens */
+#herstory, #hackathon {
+    display: none;
+} /*TODO: Will probably replace this with individual html files embedded as fancyboxes*/
+
+.sites {
+    margin: 5px;
+    /*width: 50px;
+	height: 50px;*/
+}
+
+/*** Different method of tagging with individual colors ***/
+/* if using again add <div class="html"></div> inside project div */
+/*.html:before {
+    content: "html";
+	background-color: red;
+	padding: 2px 5px;
+	border-radius: 5px;
+	box-shadow: 1px 1px darkred;
+}
+
+.css:before {
+    content: "css";
+	background-color: blue;
+	padding: 2px 5px;
+	border-radius: 5px;
+	box-shadow: 1px 1px darkblue;
+}*/
+
+/* Styling for Project Details Pages */
+.detail { /* Same as .project, but do not want height adjusted by JS */
+    background-color: white;
+	margin: 10px 0;
+	box-shadow: 1px 1px #999, 2px 2px #888, 3px 3px #777, 4px 4px #666, 5px 5px #555;
+	/*height: 150px;*/
+}
+
+.detail p, .detail h2 {
+    padding: 5px 10px;
+}
+
+.detail h2 {
+	color: #3ba1e3;
+	text-shadow: 1px 1px #555;
+}
+
+.detail img { /* Tools used and github link images */
+    margin: 5px;
+}
+
+.detail a, .detail a:visited, .detail a:active, .detail a:focus {
+    text-decoration: none;
+    color: #222;
+    outline-style: none;
+}
+
+.home {
+    position: absolute;
+	left: 15px;
+	top: 10px;
+	background: white;
+	box-shadow: 1px 1px #999, 2px 2px #888, 3px 3px #777, 4px 4px #666, 5px 5px #555;
+}
+
+@media only screen and (max-width: 768px) {
+    .home {
+	    position: initial;
+		margin: 10px 0;
+	}
+}
+
+.home p {
+    padding: 2px 5px;
+}
+
+.home a, .home a:visited, .home a:active {
+    text-decoration: none;
+	color: black;
+}
+
+/* Override Fancybox Styling */
+.fancybox-caption {
+    border: none;
+}
+.fancybox-enabled {
+    overflow: initial;
+}
+
+.image { /* Images in the main project details sections */
+    padding: 5px 15px 5px 5px;
+	max-width: 100%;
+}
+
+.video {
+    position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.video iframe {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+.code {
+    text-align: left;
+	display: flex;
+	justify-content: center;
+}

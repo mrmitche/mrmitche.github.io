@@ -1,32 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Matthew Mitchell</title>
-<link rel="icon"
-      type="image/png"
-	  href="favicon.png">
+  <title>Test Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+        type="image/png"
+	    href="img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/format.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/jquery.fancybox.min.css" rel="stylesheet" />
 </head>
 <body>
-<h1>Matthew Mitchell</h1>
-<p>Welcome! This page has a quick outline of some of projects. 
-<hr>
-<h3>Slack Thesaurus Bot</h3>
-<b>Problem: </b>When writing for a news website, I often found myself opening additional tabs to search for synonyms to avoid repeating descriptive words. In Chrome, opening extra tabs clogs up your RAM and slows your computer down. This was particularly annoying on my old laptop.
-<br><img src="images\Google Synonyms.JPG" height="203" width="340">
-<br><b>Solution: </b>The news website has a Slack group for the writers, which we already keep open. Create a Slack bot to perform synonym searches in the same tab as writers chat. 
-<br><img src="images\Slack Synonyms.JPG">
-<br><b>Tools used: </b>Python, pip, virtualenv, Slack API, slackclient, PyDictionary
-<hr>
-<h3>Custom RSS Replacement</h3>
-<b>Problem: </b>In my spare time, I review board games. The Indie Game Alliance maintains a page of designers looking to get their game reviewed. There is no way to tell how long the games have been on the list and if they still need reviews. Normally, I could add the site's RSS feed to my RSS reader and monitor for new games that way. Unfortunately the site is not RSS friendly.
-<br><b>Solution: </b>Use Python web scraping to pull a list of games on the page and compare to previous list of games. If any games are added, notify me of game title and automatically open the website.
-<br><b>Tools used: </b>Python, batch
-<hr>
 
-<a class="twitter-follow-button"
- href="https://twitter.com/mrmitche_"
- data-size="large">
-Follow Matt on Twitter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p><a href="http://stackexchange.com/users/2227979/matt"><img src="http://stackexchange.com/users/flair/2227979.png" width="208" height="58" alt="profile for Matt on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Matt on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
+<section class="container full-width">
+  <div class="row title">
+    <h1>Matthew Mitchell</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-sm-4 html css jquery fancybox">
+	  <div class="project">
+	    <a href="herstory"><img src="img/hers.png" /></a>
+		<div class="tags">
+		  <p>html</p>
+		  <p>css</p>
+		  <p>jquery</p>
+		  <p>fancybox</p>
+		</div>
+	  </div>
+    </div>
+    <div class="col-md-3 col-sm-4 python swift arduino">
+	  <div class="project">
+	    <a href="hackthe6ix"><img src="img/dew.png" /></a>
+		<div class="tags">
+		  <p>python</p>
+		  <p>swift</p>
+		  <p>arduino</p>
+		</div>
+	  </div>
+    </div>
+    <div class="col-md-3 col-sm-4 python nuke">
+	  <div class="project">
+	    <a href="nukescript"><img src="img/nukescript.png" /></a>
+		<div class="tags">
+		  <p>python</p>
+		  <p>nuke</p>
+		</div>
+	  </div>
+    </div>
+    <div class="col-md-3 col-sm-4 python batch tkinter">
+	  <div class="project">
+	    <a href="gamechecker"><img src="img/game.png" /></a>
+		<div class="tags">
+		  <p>python</p>
+		  <p>batch</p>
+		  <p>tkinter</p>
+		</div>
+	  </div>
+    </div>
+    <div class="col-md-3 col-sm-4 python">
+	  <div class="project">
+	    <a href="thesaurus"><img src="img/slackbot.png" /></a>
+	    <div class="tags">
+		  <p>python</p>
+		</div>
+	  </div>
+    </div>
+    <div class="col-md-3 col-sm-4 manufacturing">
+	  <div class="project">
+	    <a href="https://www.youtube.com/watch?v=Miv69qWAX0k"><img src="img/mold.png" /></a>
+		<div class="tags">
+		  <p>manufacturing</p>
+		</div>
+	  </div>
+    </div>
+    <div class="col-md-3 col-sm-4 javascript">
+	  <div class="project">
+	    <a href="tictactoe"><img src="img/tictactoe.png" /></a>
+		<div class="tags">
+		  <p>javascript</p>
+		</div>
+	  </div>
+    </div>
+    <div class="col-md-3 col-sm-4 javascript phonegap">
+	  <div class="project">
+	    <a href="gca3"><img src="img/lumbajack.png" /></a>
+		<div class="tags">
+		  <p>javascript</p>
+		  <p>phonegap</p>
+		</div>
+	  </div>
+    </div>
+  </div>
+  <div id="reset">
+    <p>Show All Projects</p>
+  </div>
+  <a href="https://twitter.com/mrmitche_"><img class="sites" src="img/twitter.png" /></a>
+  <a href="https://www.linkedin.com/in/mrmitche/"><img class="sites" src="img/linkedin.png" /></a>
+  <a href="https://github.com/mrmitche"><img class="sites" src="img/github.png" /></a>
+</section>
+
+<div id="herstory">
+  <p>Her(story) project information</p>
+</div>
+
+<div id="hackathon">
+  <p>other project information</p>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+
 </body>
 </html>

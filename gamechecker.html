@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Game Review Checker Project Details - Matthew Mitchell</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+        type="image/png"
+	    href="img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/jquery.fancybox.min.css" rel="stylesheet" />
+  <link href="css/format.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>
+
+<section class="container full-width">
+  <div class="row title">
+    <h1>Game Checker</h1>
+  </div>
+  <div class="home">
+    <a href="/"><p>&#10094; Home</p></a>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+	  <div class="row">
+	    <div class="col-lg-12">
+	      <div class="detail">
+		    <h2>Summary</h2>
+		    <p>A Python web scraping tool that checks for updates from the Indie Game Alliance website for board games seeking reviews.</p>
+	      </div>
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col-lg-12">
+	      <div class="detail">
+		    <h2>Tools Used</h2>
+			<img src="img/python.png" />
+			<p>Python, batch, Tkinter</p>
+	      </div>
+		</div>
+	  </div>
+	  <!-- Section to add once code added to git <div class="row">
+	    <div class="col-lg-12">
+	      <div class="detail">
+		    <h2>See Project In Action</h2>
+			<a href="img/dofordew1.jpg" data-fancybox="dofordew" data-caption="Start up screen"><h3>Screenshot Gallery</h3></a>
+			<a href="img/dofordew2.jpg" data-fancybox="dofordew" data-caption="Task list"></a>
+			<a href="img/dofordew3.jpg" data-fancybox="dofordew" data-caption="Task description"></a>
+			<a href="img/dofordew4.jpg" data-fancybox="dofordew" data-caption="Photos could be taken in-app or uploaded from your library"></a>
+			<a href="img/dofordew5.jpg" data-fancybox="dofordew" data-caption="Proof of concept fridge locked"></a>
+			<a href="img/dofordew6.jpg" data-fancybox="dofordew" data-caption="Proof of concept fridge unlocked"></a>
+			<a href="https://devpost.com/software/dothedew-hackthefridge"><h3>DevPost Submission</h3></a>
+			<a href="https://github.com/mrmitche/DoForDew"><img src="img/githubtext.png" /></a>
+	      </div>
+		</div>
+	  </div> -->
+    </div>
+	<div class="col-lg-8">
+	  <div class="detail">
+		<p>In my spare time, I review board games. The Indie Game Alliance maintains a page of designers looking to get their game reviewed. There is no way to tell how long the games have been on the list and if they still need reviews. Normally, I could add the site's RSS feed to my RSS reader and monitor for new games that way. Unfortunately the site is not RSS friendly, so I created my own solution.</p>
+		<p>The script grabs all the games listed on the seeking reviewer page and compares with a list of games from the last time it checked. If any games are added, notifies me of the game title and automatically opens the website.</p>
+		<img class="image" src="img/GamesAdded.png" />
+		<p>Originally the Python script was run from a batch file, but more recently I used this project to learn Tkinter and created a simple GUI.</p>
+		<img class="image" src="img/gamecheckergui.png" />
+	  </div>
+	</div>
+  </div>
+</section>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+
+</body>
+</html>
